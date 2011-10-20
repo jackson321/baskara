@@ -1,28 +1,25 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 
 public class Baskara {
 	public static void main(String[] args) throws BaskaraException {
-		Scanner entrada = new Scanner(System.in);
-		System.out.print("Digite o valor de a: ");
-		String entradaStringA = entrada.nextLine();
-		System.out.print("Digite o valor de b: ");
-		String entradaStringB = entrada.nextLine();
-		System.out.print("Digite o valor de b: ");
-		String entradaStringC = entrada.nextLine();
-		
-		int a = Integer.parseInt(entradaStringA);
-		int b = Integer.parseInt(entradaStringB);
-		int c = Integer.parseInt(entradaStringC);
-		
-		calcular(a, b, c);
-		String[] raizes = trasformaStrings(a,b,c);
-		
-		System.out.print("x' é igual a:" +raizes[0]+" e  x´´ é igual a:"+raizes[1] );
-		
+				
+			String entradaStringA = JOptionPane.showInputDialog("Digite o valor de a");	
+			String entradaStringB = JOptionPane.showInputDialog("Digite o valor de b");
+			String entradaStringC = JOptionPane.showInputDialog("Digite o valor de c");
+			
+			int a = Integer.parseInt(entradaStringA);
+			int b = Integer.parseInt(entradaStringB);
+			int c = Integer.parseInt(entradaStringC);
+			
+			calcular(a, b, c);
+			String[] raizes = trasformaStrings(a,b,c);
+			
+			  JOptionPane.showMessageDialog(null, "x' é igual a:" +raizes[0]+"  e  x´´ é igual a:"+raizes[1] );
 		 
 	}
-
 
 	private static String[] trasformaStrings(int a, int b, int c) throws BaskaraException {
 		double[] resultado = calcular(a, b, c);
