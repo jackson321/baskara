@@ -16,10 +16,21 @@ public class Baskara {
 		int c = Integer.parseInt(entradaStringC);
 		
 		calcular(a, b, c);
+		String[] raizes = trasformaStrings(a,b,c);
 		
-		System.out.print("as raizes são: " );
+		System.out.print("x' é igual a:" +raizes[0]+" e  x´´ é igual a:"+raizes[1] );
 		
 		 
+	}
+
+
+	private static String[] trasformaStrings(int a, int b, int c) throws BaskaraException {
+		double[] resultado = calcular(a, b, c);
+		String[] raizes = new String [2];
+		raizes[0] = "" + resultado[0];
+		raizes[1] = "" + resultado[1];
+	
+		return raizes;
 	}
 
 
