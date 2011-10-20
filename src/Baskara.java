@@ -15,13 +15,13 @@ public class Baskara {
 			int c = Integer.parseInt(entradaStringC);
 			
 			calcular(a, b, c);
-			String[] raizes = trasformaStrings(a,b,c);
+			String[] stringRaizes = trasformaEmStrings(a,b,c);
 			
-			  JOptionPane.showMessageDialog(null, "x' é igual a:" +raizes[0]+"  e  x´´ é igual a:"+raizes[1] );
+			  JOptionPane.showMessageDialog(null, "x' é igual a:" +stringRaizes[0]+"  e  x´´ é igual a:"+stringRaizes[1] );
 		 
 	}
 
-	private static String[] trasformaStrings(int a, int b, int c) throws BaskaraException {
+	private static String[] trasformaEmStrings(int a, int b, int c) throws BaskaraException {
 		double[] resultado = calcular(a, b, c);
 		String[] raizes = new String [2];
 		raizes[0] = "" + resultado[0];
